@@ -3,8 +3,17 @@
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
-  var app = new EmberApp(defaults);
+  var fingerprint = 'https://s3-eu-west-1.amazonaws.com/omarhamdan/dist/';
 
+  var app = new EmberApp(defaults, {
+    // Add options here
+      fingerprint: {
+      prepend: fingerprint,
+      extensions: ['js', 'css', 'png', 'jpg', 'gif', 'svg', 'json'],
+      // Need to add `json` in order to fingerprint the manifest file
+      replaceExtensions: ['html', 'css', 'js', 'json']
+    },
+  });
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //
