@@ -12,7 +12,7 @@ module.exports = function(deployTarget) {
       keyPrefix: 'omarhamdan:index'
     },
     s3: {
-      prefix: 'emberapp'
+      prefix: 'dist'
     }
   };
   if (VALID_DEPLOY_TARGETS.indexOf(deployTarget) === -1) {
