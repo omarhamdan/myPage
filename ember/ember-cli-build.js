@@ -3,7 +3,7 @@
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
-  var fingerprint = 'https://s3-eu-west-1.amazonaws.com/omarhamdan/dist/';
+  var fingerprint = 'https://s3.amazonaws.com/omarhamdan-assets/dist/';
 
   var app = new EmberApp(defaults, {
     // Add options here
